@@ -4,4 +4,9 @@
     <string name="e_mail">E-mail</string>
     <string name="phone">Phone</string>
     <string name="address">Address</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="nrc">NRC</string>
+    <string name="d_o_b">D.O.B</string>
+    <string name="gender">Gender</string>
 </resources>

@@ -16,6 +16,7 @@ public class RealmController {
     private static RealmController instance;
     private final Realm realm;
 
+
     public RealmController(Application application) {
         realm = Realm.getDefaultInstance();
     }

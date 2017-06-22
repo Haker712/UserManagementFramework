@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.haker.usermanagementframework.adapters.RealmBooksAdapter;
+import com.haker.usermanagementframework.adapters.RealmUsersAdapter;
 import com.haker.usermanagementframework.adapters.UsersAdapter;
 import com.haker.usermanagementframework.model.User;
 import com.haker.usermanagementframework.realm.RealmController;
@@ -30,6 +30,9 @@ public class ViewUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_user);
 
         recycler = (RecyclerView) findViewById(R.id.recycler);
+
+        //get realm instance
+        this.realm = RealmController.with(this).getRealm();
 
         setupRecycler();
 
@@ -58,7 +61,7 @@ public class ViewUserActivity extends AppCompatActivity {
 
     public void setRealmAdapter(RealmResults<User> users) {
 
-        RealmBooksAdapter realmAdapter = new RealmBooksAdapter(this.getApplicationContext(), users, true);
+        RealmUsersAdapter realmAdapter = new RealmUsersAdapter(this.getApplicationContext(), users, true);
         // Set the data and tell the RecyclerView to draw
         usersAdapter.setRealmAdapter(realmAdapter);
         usersAdapter.notifyDataSetChanged();

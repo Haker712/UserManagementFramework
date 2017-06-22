@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.buttonAddUser)
     void addUser() {
-        startActivity(new Intent(this, AddUserActivity.class));
+        startActivity(new Intent(this, AddUserActivity.class).putExtra("edit", "no"));
     }
 
     @OnClick(R.id.buttonViewUser)
